@@ -1,0 +1,164 @@
+@media (pointer: none), (pointer: coarse) {
+div#container {
+	-webkit-transform: scale(1.9);
+	-moz-transform: scale(1.9);
+	transform-origin: top left;
+	min-width:720px;
+	width: 735px !important;
+	max-width: 750px !important;
+	grid-template-columns: 0 minmax(0, 1fr) 0 !important;
+	max-height: 100%;
+	}
+div#page_content {
+        min-height:50vh;
+	max-height: 63vh;
+	max-width:650px !important;
+	overflow: auto
+	}
+div#userinfo {
+	font-size: 0.6em !important
+	}
+div#page_content, div#page_banner, div#page_footer, div#page_event {
+	width: 90%;
+	padding: 0 5%;
+	margin: 5px auto
+	}
+div#page_footer div {
+		width:100%;
+	}
+div#page_event {
+	min-height: 0
+	}
+div#sb_side {
+	overflow-x: hidden;
+	width: 0;
+	z-index: 1;
+	transition: width 0.1s;
+	top: 0;
+	position: fixed
+	}
+div#sb_side:hover {
+	width: 130px;
+	transition: width 0.1s;
+	transition-delay: 300ms
+	}
+div#sb_side:hover::after {
+	left: 130px;
+	transition: left 0.1s;
+	transition-delay: 300ms
+	}
+div#sb_side::after {
+	content: "";
+	height: 150px;
+	position: fixed;
+	top: 60px;
+	left: 0;
+	border-top: 15px transparent solid;
+	border-left: 35px solid grey;
+	border-bottom: 15px transparent solid;
+	transition: left 0.1s
+	}
+div#sb_clock {
+	position: fixed;
+        top: 0;
+        margin: 10px 120px;
+        font-size: 0.7em !important
+        }
+div#aio_sidebar_placeholder {
+	width: 0;
+	margin: 0
+        }
+div#aio_sidebar {
+        position: fixed;
+        width: 0;
+        right: 0;
+	max-height: 100%;
+        transition: width 0.1s;
+	overflow-x: hidden;
+	overflow-y: auto;
+	scrollbar-width: thin;
+	background-color: black;
+	border-radius: 5px;
+	z-index: 1;
+	margin: 10px 0 0 0
+        }
+div#aio_sidebar::after {
+        content: "";
+        height: 150px;
+        border-right: 35px grey solid;
+        border-top: 15px transparent solid;
+        border-bottom: 15px transparent solid;
+        top: 50px;
+        right: 0px;
+        position: fixed;
+        transition: right 0.1s
+        }
+#aio_sidebar:hover, div#aio_sidebar:active {
+        width: 380px;
+        transition: all 0.1s;
+        transition-delay: 300ms
+        }
+div#aio_sidebar:hover::after {
+        right: 380px;
+        transition: right 0.1s;
+        transition-delay: 300ms
+        }
+.form-control {
+        min-height: 3em !important;
+        white-space: normal
+        }
+[type="checkbox"], [type="radio"] {
+        transform: scale(2)
+        }
+#ss_board, #neggsweeper_grid {
+        transform-origin: top;
+        transform: scale(1.1);
+        z-index: 2
+        }
+div#aio_sidebar .aioImg img {
+        max-height: 50px !important
+        }
+.inventory {
+        grid-template-columns: repeat(5, 110px);
+        justify-items: center;
+        grid-column-gap: 20px !important
+        }
+#shopInventory {
+        grid-template-columns: repeat(4, 130px);
+	justify-items: center;
+	grid-column-gap: 20px !important
+	}
+div.inv-item, div.shop-item {
+	width: 120px
+	}
+div[class$=-item] .med-image {
+	width: 110px;
+	height: 110px
+	}
+#quickref_petlist {
+	width: auto
+	}
+@media (orientation: landscape) {
+	div#container {
+		grid-template-columns: 140px minmax(0,1fr) 0px !important;
+		-webkit-transform:scale(0.7);
+		-mox-transform:scale(0.7);
+		max-width:100% !important;
+		}
+	div#aio_sidebar_placeholder, div#aio_sidebar {
+		width:380px;
+		position:relative;
+		}
+	div#sb_side {
+		width:130px;
+		}
+	div#sb_side::after, div#aio_sidebar::after, div#page_footer {
+	display:none;
+		}
+	div#page_content {
+		overflow: visible;
+		height: auto;
+max-height:auto;
+        }
+}
+}
