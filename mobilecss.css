@@ -1,10 +1,10 @@
 @media (pointer: none), (pointer: coarse) {
 div#container {
-	-webkit-transform: scale(1.9);
-	-moz-transform: scale(1.9);
+	-webkit-transform: scale(1.3);
+	-moz-transform: scale(1.3);
 	transform-origin: top left;
 	min-width:720px;
-	width: 735px !important;
+	width: 100% !important;
 	max-width: 750px !important;
 	grid-template-columns: 0 minmax(0, 1fr) 0 !important;
 	max-height: 100%;
@@ -158,7 +158,7 @@ div[class$=-item] .med-image {
 	div#page_content {
 		overflow: visible;
 		height: auto;
-max-height:auto;
+		max-height:min-content;
         }
 }
 }
