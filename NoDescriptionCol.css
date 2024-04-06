@@ -1,0 +1,17 @@
+@media (pointer: none) and (orientation:portrait), (pointer: coarse) and (orientation:portrait) {
+	div.market_grid.stock>:nth-child(7n+7) {
+		display:none;
+	}
+	div.market_grid.stock {
+		grid-template-columns: 1.5fr 90px min-content 1fr min-content min-content;
+	}
+	.stock>.action, .stock>.footer,.sdb>.action, .sdb>.footer {
+		grid-column: span 6 !important;
+	}
+	div.market_grid.sdb>:nth-child(7n+5) {
+		display:none;
+	}
+	div.market_grid.sdb {
+		grid-template-columns: min-content 1.5fr 90px min-content 1fr min-content;
+	}
+}
