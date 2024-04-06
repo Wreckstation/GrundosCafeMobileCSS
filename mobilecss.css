@@ -10,7 +10,8 @@
 	#page_content {
 		min-height: 60vh;
 		max-height: 63vh;
-		overflow: auto
+		overflow: auto;
+		scrollbar-width: thin
 	}
 	div#userinfo {
 		font-size: 0.6em !important
@@ -73,7 +74,7 @@
 		position: fixed;
 		width: 0;
 		right: 0;
-		max-height: 100%;
+		max-height: 65vh;
 		transition: width 0.1s;
 		overflow-x: hidden;
 		overflow-y: auto;
@@ -137,9 +138,14 @@
 	div#shop_wizard_search {
 		width:100%;
 	}
-	main textarea {
-		overflow: auto;
-		max-width: 525px !important;
+	div.flex-column {
+		max-width:100%;
+	}
+	#page_content main textarea {
+		max-width: 100%;
+	}
+	form div.right{
+		line-height:2em;
 	}
 	div.inv-item,
 	div.shop-item {
@@ -163,6 +169,7 @@
 	div#aio_sidebar {
 		width: 380px;
 		position: relative;
+		max-height:100%
 	}
 	div#sb_side {
 		width: 130px;
