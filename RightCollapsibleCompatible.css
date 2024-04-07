@@ -126,6 +126,18 @@
         width: auto;
         grid-template-columns: repeat(3, 1fr);
     }
+	div#shop_wizard_search {
+		width: 100%;
+	}
+	div.flex-column {
+		max-width:100%;
+	}
+	#page_content main textarea {
+		max-width: 100%;
+	}
+	form div.right{
+		line-height:2em;
+	}
     @media screen and (orientation: landscape) {
         div#container {
             grid-template-columns: 140px minmax(0, 1fr) 0px !important;
