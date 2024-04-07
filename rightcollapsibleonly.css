@@ -15,6 +15,15 @@
 		min-height:60vh;
 		scrollbar-width: thin;
 	}
+	#page_content::after{
+		display:block;
+		margin-top:100px;
+		height:30px;
+		content:"End of Page";
+		text-align:center;
+		padding:5px;
+		border-top:2px dotted grey;
+	}
 	#page_content,
 	#page_event,
 	#page_banner {
@@ -27,7 +36,8 @@
 		width: 100%;
 	}
 	#footer_content {
-		width: 90%;
+		width:90%;
+		margin: 5px 20px;
 	}
 	div#sb_side {
 		z-index: 1;
@@ -131,7 +141,6 @@
 			-webkit-transform: scale(0.7);
 			-mox-transform: scale(0.7);
 			max-width: 100% !important;
-			width:100% !important;
 		}
 		div#aio_sidebar_placeholder,
 		div#aio_sidebar {
