@@ -1,0 +1,156 @@
+@media (pointer: none),
+(pointer: coarse) {
+    div#container {
+        -webkit-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        transform-origin: top left;
+        min-width: 730px;
+        width: 735px !important;
+        max-width: 100% !important;
+        grid-template-columns: 0 minmax(0, 1fr) 0 !important;
+        max-height: 100%;
+        overflow:visible hidden;
+    }
+/*Remove this div#page_content if you don't want the inner page to scroll*/
+	div#page_content {
+		min-height:60vh;
+		max-height:62vh;
+		overflow:auto;
+	}
+	#page_content::after{
+		display:block;
+		margin-top:100px;
+		height:30px;
+		content:"End of Page";
+		text-align:center;
+		padding:5px;
+		border-top:3px dashed grey;
+	}
+    #page_content,
+    #page_event,
+    #page_banner {
+        padding-left: 150px;
+        padding-right:50px;
+        width:calc(100% - 200px) !important;
+    }
+    div#page_footer {
+        width: 100%;
+    }
+    #footer_content {
+        width: 90%;
+		margin:5px 20px;
+    }
+    div#sb_side {
+        z-index: 1;
+    }
+    div#userinfo {
+        font-size: 0.7em !important
+    }
+    div#page_notif {
+        margin-right: 5px;
+    }
+    div#page_event {
+        min-height: 0
+    }
+    div#aio_sidebar_placeholder {
+		overflow-y:auto;
+		overflow-x:visible;
+        width: 0;
+        margin: 0;
+    }
+    div#aio_sidebar {
+        position: absolute;
+        width: 0px;
+        right: -50px;
+        max-height: 100%;
+        transition: width 0.1s;
+        scrollbar-width: thin;
+        background-color: black;
+        border-radius: 5px;
+        z-index: 1;
+        margin: 10px 0 0 0
+    }
+    div#aio_sidebar::after {
+        content: "";
+        height: 150px;
+        border-right: 35px black solid;
+        border-top: 15px transparent solid;
+        border-bottom: 15px transparent solid;
+        top: 50px;
+        right: 50px;
+        position: absolute;
+        transition: right 0.1s
+    }
+    div#aio_sidebar:hover,
+    div#aio_sidebar:active {
+        right:0px;
+        width: 380px;
+        transition: all 0.1s;
+        transition-delay: 300ms
+    }
+    div#aio_sidebar:hover::after {
+        right: 380px;
+        transition: right 0.1s;
+        transition-delay: 300ms
+    }
+    .form-control {
+        min-height: 3em !important;
+        white-space: normal
+    }
+    [type="checkbox"],
+    [type="radio"] {
+        transform: scale(2)
+    }
+    div#aio_sidebar .aioImg img {
+        max-height: 50px !important
+    }
+    .inventory {
+        grid-template-columns: repeat(5, 110px);
+        justify-items: center;
+    }
+    #shopInventory {
+        grid-template-columns: repeat(4, 120px);
+        justify-items: center;
+        grid-column-gap: 20px !important
+    }
+    div.inv-item,
+    div.shop-item {
+        width: 120px
+    }
+    div[class$=-item] .med-image {
+        width: 100px;
+        height: 100px
+    }
+    #quickref_petlist {
+        width: auto;
+        grid-template-columns: repeat(3, 1fr);
+    }
+    @media screen and (orientation: landscape) {
+        div#container {
+            grid-template-columns: 140px minmax(0, 1fr) 0px !important;
+            -webkit-transform: scale(0.7);
+            -mox-transform: scale(0.7);
+            max-width: 100% !important;
+			      overflow:visible;
+        }
+        div#aio_sidebar_placeholder,
+        div#aio_sidebar {
+            width: 380px;
+            position: relative;
+        }
+        div#aio_sidebar::after,
+        div#page_footer {
+            display: none;
+        }
+        #page_content,
+        #page_event,
+        #page_banner {
+            padding-left: 10px;
+            margin-right: 0px;
+        }
+        div#page_content {
+            overflow: visible;
+            height: auto;
+        }
+    }
+}
