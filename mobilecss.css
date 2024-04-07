@@ -13,6 +13,15 @@
 		overflow: auto;
 		scrollbar-width: thin
 	}
+	#page_content::after{
+		display:block;
+		margin-top:100px;
+		height:30px;
+		content:"End of Page";
+		text-align:center;
+		padding:5px;
+		border-top:2px dotted grey;
+	}
 	div#userinfo {
 		font-size: 0.6em !important
 	}
@@ -21,14 +30,13 @@
 	div#page_footer,
 	div#page_event {
 		width: 90%;
-		padding: 0 5%;
 		margin: auto;
 	}
 	div#page_event {
 		min-height: 0
 	}
 	div#page_footer div {
-		margin: 0 auto;
+		margin: 5px auto;
 		width: 100%
 	}
 	div#sb_side {
