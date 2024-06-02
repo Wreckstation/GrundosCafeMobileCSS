@@ -1,10 +1,10 @@
 @media (pointer: none),
 (pointer: coarse) {
 	div#container {
-		-webkit-transform: scale(1.3);
+        -webkit-transform: scale(1.3);
 		-moz-transform: scale(1.3);
 		transform-origin: top left;
-		min-width: 730px;
+		min-width: 780px;
 		width: 100%;
 		max-width: 780px !important;
 		grid-template-columns: 0 minmax(0, 1fr) 0 !important;
@@ -15,15 +15,17 @@
 		min-height:60vh;
 		scrollbar-width: thin;
 	}
-	#page_content::after{
-		display:block;
-		margin-top:100px;
-		height:30px;
-		content:"End of Page";
-		text-align:center;
-		padding:5px;
-		border-top:2px dotted grey;
-	}
+    #page_content::after {
+        display: block;
+        margin: auto;
+        margin-top: 200px;
+        width: 70%;
+        height: 30px;
+        content: "";
+        text-align: center;
+        padding: 5px;
+        border-top: 5px dotted Gainsboro
+        }
 	#page_content,
 	#page_event,
 	#page_banner {
@@ -53,32 +55,44 @@
 	}
 	div#aio_sidebar_placeholder {
 		width: 0;
+		left:735px;
 		margin: 0;
+		position:absolute;
 	}
 	div#aio_sidebar {
-		position: absolute;
+		position: fixed;
 		width: 0px;
+		top:30px;
 		right: 0px;
 		max-height: 65vh;
 		transition: width 0.1s;
 		overflow-x:hidden;
 		overflow-y:auto;
 		scrollbar-width: thin;
-		background-color: black;
 		border-radius: 5px;
 		z-index: 1;
 		margin: 10px 0 0 0
 	}
 	div#aio_sidebar::after {
-		content: "";
+		content: "AIO";
 		height: 150px;
 		border-right: 35px grey solid;
 		border-top: 15px transparent solid;
 		border-bottom: 15px transparent solid;
-		top: 50px;
-		right: 0px;
+		top: 80px;
+		left: 730px;
 		position: fixed;
-		transition: right 0.1s
+		transition: right 0.1s;
+				width:40px;
+        writing-mode:vertical-rl;
+        padding-right:5px;
+        /*default sidebar styling*/
+		border-radius: 15px 0px 0px 15px;
+		background-image:url(https://grundoscafe.b-cdn.net/misc/aio-sidebar/default.png);
+		border:2px solid black;
+		box-shadow: 0 0 4px rgba(0,0,0,0.7);
+        font:30px Heffaklump;
+        font-weight:bolder;
 	}
 	div#aio_sidebar:hover,
 	div#aio_sidebar:active {
@@ -87,8 +101,8 @@
 		transition-delay: 300ms
 	}
 	div#aio_sidebar:hover::after {
-		right: 380px;
-		transition: right 0.1s;
+		left: 350px;
+		transition: left 0.1s;
 		transition-delay: 300ms
 	}
 	.form-control {
@@ -97,7 +111,8 @@
 	}
 	[type="checkbox"],
 	[type="radio"] {
-		transform: scale(2)
+       height:1em;
+        width:1em;
 	}
 	div#aio_sidebar .aioImg img {
 		max-height: 50px !important
@@ -135,6 +150,9 @@
 	form div.right{
 		line-height:2em;
 	}
+    form {
+        overflow-x:auto;
+    }
 	@media screen and (orientation: landscape) {
 		div#container {
 			grid-template-columns: 140px minmax(0, 1fr) 0px !important;
