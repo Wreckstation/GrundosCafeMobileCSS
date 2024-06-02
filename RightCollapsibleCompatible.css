@@ -160,7 +160,8 @@
             font-size: 0.6em;
         }
 }
-@media screen and (orientation: landscape) {
+@media (pointer: none) and (orientation: landscape),
+(pointer: coarse) and (orientation: landscape) {
 		div#container {
 			grid-template-columns: 140px minmax(0, 1fr) 190px !important;
 			max-width: 935px !important;
