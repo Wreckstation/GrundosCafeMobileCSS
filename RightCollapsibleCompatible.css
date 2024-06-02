@@ -159,32 +159,32 @@
         #userinfo {
             font-size: 0.6em;
         }
-        @media screen and (orientation: landscape) {
-            div#container {
-                grid-template-columns: 140px minmax(0, 1fr) 0px !important;
-                -webkit-transform: scale(0.7);
-                -mox-transform: scale(0.7);
-                max-width: 100% !important;
-            }
-            div#aio_sidebar_placeholder,
-            div#aio_sidebar {
-                width: 380px;
-                position: relative;
-                max-height:100%;
-            }
-            div#aio_sidebar::after,
-            div#page_footer {
-                display: none;
-            }
-            div#page_content,
-            div#page_event,
-            div#page_banner {
-                padding-left: 10px;
-                width:100% !important;
-            }
-            div#page_content {
-                overflow: visible;
-                height: auto
-            }
-        }
+}
+@media screen and (orientation: landscape) {
+		div#container {
+			grid-template-columns: 140px minmax(0, 1fr) 190px !important;
+			max-width: 935px !important;
+		}
+		div#aio_sidebar_placeholder,
+		div#aio_sidebar {
+			width: 190px;
+            right:0px;
+			position: static;
+			max-height:100%;
+            
+		}
+		div#aio_sidebar::after,
+		div#page_footer {
+			display: none;
+		}
+		div#page_content,
+		div#page_event,
+		div#page_banner {
+			padding-left: 10px;
+		}
+		div#page_content {
+			overflow: visible;
+			height: auto;
+            width:580px !important;
+		}
 }
