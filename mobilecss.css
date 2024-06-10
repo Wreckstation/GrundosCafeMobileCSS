@@ -1,45 +1,110 @@
-@media (pointer: none), (pointer: coarse) {
-	div#container {
-		-webkit-transform: scale(1.3);
-		-moz-transform: scale(1.3);
-		transform-origin: top left;
-		width: 100%;
-		max-width: 750px !important;
-		grid-template-columns: 0 minmax(0, 1fr) 0 !important;
+@media (pointer: none) and (orientation: portrait), (pointer: coarse) and (orientation: portrait) {
+	/* Remove below section to disable fixed scrolling behavior*/
+    div#page_content {
+        overflow: auto;
+        max-height: 63vh;
+        min-height: 60vh;
+        padding-right: 60px;
+        scrollbar-width: thin;
+        }
+    #page_content::after {
+        display: block;
+        margin: auto;
+        margin-top: 200px;
+        width: 70%;
+        height: 30px;
+        content: "";
+        text-align: center;
+        padding: 5px;
+        border-top: 5px dotted Gainsboro
+        }
+	div#aio_sidebar {
+		max-height: 65vh;
 	}
-	#page_content {
-		min-height: 60vh;
-		max-height: 63vh;
-		overflow: auto;
-		scrollbar-width: thin
+	/*Remove above section to disable fixed scrolling behavior*/
+    div#container {
+        -webkit-transform: scale(1.3);
+        -moz-transform: scale(1.3);
+        transform-origin: top left;
+        max-width: 795px !important;
+	grid-template-columns: 0 minmax(0, 1fr) 0 !important
+        }
+	#page_content, #page_event,{
+        margin-left: 60px
+        }
+	div#page_banner {
+		margin:auto;
 	}
-	#page_content::after{
-		display:block;
-		margin-top:100px;
-		height:30px;
-		content:"End of Page";
-		text-align:center;
-		padding:5px;
-		border-top:2px dotted grey;
+	div#page_footer {
+        width: 100%
+        }
+    div#sb_side {
+        z-index: 1
+        }
+    div#userinfo {
+        font-size: 0.5em !important
+        }
+    div#page_notif {
+        margin-right: 5px
+        }
+    div#page_event {
+        min-height: 0
+        }
+    div#aio_sidebar_placeholder {
+        width: 0;
+        left: 740px;
+        margin: 0;
+        position: absolute
+        }
+    div#aio_sidebar {
+        position: fixed;
+        width: 0;
+        top: 30px;
+        right: 0;
+        transition: width 0.1s;
+        overflow-x: hidden;
+        overflow-y: auto;
+        scrollbar-width: thin;
+        z-index: 1;
+        margin: 10px 0 0 0
+        }
+    div#aio_sidebar::after, div#sb_side::after {
+        height: 150px;
+        top: 80px;
+        position: fixed;
+        transition: left 0.1s;
+        width: 40px;
+        writing-mode: vertical-rl;
+        padding-right: 5px;
+        /*default sidebar styling. Replace with your
+		  own sidebar theme here.*/
+		color:black;
+        background-image: url(https://grundoscafe.b-cdn.net/misc/aio-sidebar/default.png);
+        border: 2px solid black;
+        box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+        font: 30px Heffaklump;
+        font-weight: bolder
+        }
+	div#aio_sidebar::after {
+		content: "AIO";
+		left: 745px;
+		border-radius: 15px 0 0 15px;
 	}
-	div#userinfo {
-		font-size: 0.6em !important
+	div#sb_side::after {
+		content: "sidebar";
+		left:0px;
+		border-radius: 0px 15px 15px 0px;
 	}
-	div#page_content,
-	div#page_banner,
-	div#page_footer,
-	div#page_event {
-		width: 90%;
-		margin: auto;
-		padding: 0 5%
-	}
-	div#page_event {
-		min-height: 0
-	}
-	div#page_footer div {
-		margin: 5px auto;
-		width: 100%
-	}
+    div#aio_sidebar:hover, div#aio_sidebar:active {
+        width: 380px;
+        transition: width 0.1s;
+        transition-delay: 300ms
+        }
+    div#aio_sidebar:hover::after {
+        left: 365px;
+        transition: left 0.1s;
+        transition-delay: 300ms
+        }
 	div#sb_side {
 		overflow-x: hidden;
 		width: 0;
@@ -58,143 +123,91 @@
 		transition: left 0.1s;
 		transition-delay: 300ms
 	}
-	div#sb_side::after {
-		content: "";
-		height: 150px;
-		position: fixed;
-		top: 60px;
-		left: 0;
-		border-top: 15px transparent solid;
-		border-left: 30px solid grey;
-		border-bottom: 15px transparent solid;
-		transition: left 0.1s
-	}
 	div#sb_clock {
 		position: fixed;
 		top: 0;
 		margin: 10px 120px;
 		font-size: 0.7em !important
 	}
-	div#aio_sidebar_placeholder {
-		width: 0;
-		margin: 0
-	}
-	div#aio_sidebar {
-		position: fixed;
-		width: 0;
-		right: 0;
-		max-height: 65vh;
-		transition: width 0.1s;
-		overflow-x: hidden;
-		overflow-y: auto;
-		scrollbar-width: thin;
-		background-color: black;
-		border-radius: 5px;
-		z-index: 1;
-		margin: 10px 0 0 0
-	}
-	div#aio_sidebar::after {
-		content: "";
-		height: 150px;
-		border-right: 30px grey solid;
-		border-top: 15px transparent solid;
-		border-bottom: 15px transparent solid;
-		top: 50px;
-		right: 0px;
-		position: fixed;
-		transition: right 0.1s
-	}
-	#aio_sidebar:hover,
-	div#aio_sidebar:active {
-		width: 380px;
-		transition: all 0.1s;
-		transition-delay: 300ms
-	}
-	div#aio_sidebar:hover::after {
-		right: 380px;
-		transition: right 0.1s;
-		transition-delay: 300ms
-	}
-	.form-control {
-		min-height: 3em !important;
-		white-space: pre-wrap;
-		vertical-align: middle;
-	}
-	[type="checkbox"],
-	[type="radio"] {
-		transform: scale(2)
-	}
-	/*minor tweaks*/
-	#ss_board,
-	#neggsweeper_grid {
-		transform-origin: top;
-		transform: scale(1.1);
-		z-index: 2
-	}
-	div#aio_sidebar .aioImg img {
-		max-height: 50px !important
-	}
-	.inventory {
-		grid-template-columns: repeat(5, 120px);
-		justify-items: center;
-		grid-column-gap: 20px !important
-	}
-	#shopInventory {
-		grid-template-columns: repeat(4, 130px);
-		justify-items: center;
-		grid-column-gap: 20px !important
-	}
-	div#shop_wizard_search {
-		width:100%;
-	}
-	div.flex-column {
-		max-width:100%;
-	}
-	#page_content main textarea {
-		max-width: 100%;
-	}
-	form div.right{
-		line-height:2em;
-	}
-	div.inv-item,
-	div.shop-item {
-		width: 120px;
-	}
-	div[class$=-item] .med-image {
-		width: 110px;
-		height: 110px;
-	}
-	#quickref_petlist {
-		width: auto
-	}
-@media screen and (orientation: landscape) {
-	div#container {
-		grid-template-columns: 140px minmax(0, 1fr) 0px !important;
-		-webkit-transform: scale(0.7);
-		-mox-transform: scale(0.7);
-		max-width: 100% !important;
-	}
-	div#aio_sidebar_placeholder,
-	div#aio_sidebar {
-		width: 380px;
-		position: relative;
-		max-height:100%
-	}
-	div#sb_side {
-		width: 130px;
-	}
-	div#sb_side::after,
-	div#aio_sidebar::after,
-	div#page_footer {
-		display: none;
-	}
 	div#page_content {
-		overflow: visible;
-		height: auto;
-		max-height: min-content;
+		width:675px;
 	}
-}
-div#aio_sidebar {
-	display: block !important
-}
+    .form-control {
+        min-height: 3em !important;
+        white-space: pre-wrap
+        }
+    [type="checkbox"], [type="radio"] {
+        height: 1em;
+        width: 1em
+        }
+    div#aio_sidebar .aioImg img {
+        max-height: 50px !important
+        }
+    .inventory {
+        grid-template-columns: repeat(5, 110px);
+        justify-items: center
+        }
+    #shopInventory {
+        grid-template-columns: repeat(4, 120px);
+        justify-items: center;
+        grid-column-gap: 20px !important
+        }
+    div.inv-item, div.shop-item {
+        width: 120px
+        }
+    div[class$=-item] .med-image {
+        width: 100px;
+        height: 100px
+        }
+    div#quickref_petlist {
+        width: auto;
+        }
+    div#shop_wizard_search {
+        width: 100%
+        }
+    div.flex-column {
+        max-width: 100%
+        }
+    #page_content main textarea {
+        max-width: 100%
+        }
+    form div.right {
+        line-height: 2em
+        }
+    form {
+        overflow-x: auto
+        }
+    form[action] {
+        overflow-x: visible
+        }
+	div.game {
+		grid-template-rows: 50px 50px auto auto;
+		grid-template-columns: 104px 50px;
+	}
+	.game b {
+		word-wrap:break-word;
+	}
+    }
+@media (pointer: none) and (orientation: landscape), (pointer: coarse) and (orientation: landscape) {
+    div#container {
+        grid-template-columns: 140px minmax(0, 1fr) 190px !important;
+        max-width: 935px !important
+        }
+    div#aio_sidebar_placeholder, div#aio_sidebar {
+        width: 190px;
+        right: 0;
+        position: static;
+        max-height: 100%
+        }
+    div#aio_sidebar::after, div#page_footer {
+        display: none
+        }
+    div#page_content, div#page_event, div#page_banner {
+        padding-left: 10px
+        }
+    div#page_content {
+        overflow: visible;
+        height: auto;
+        width: 595px !important
+        }
 }
