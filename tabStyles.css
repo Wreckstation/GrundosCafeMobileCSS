@@ -1,0 +1,93 @@
+/*Blue*/
+div#aio_sidebar::after,
+div#sb_side::after {
+    /*Replace with your own sidebar theme here.*/
+    color: black;
+    background-image: url(https://grundoscafe.b-cdn.net/misc/aio-sidebar/defaultblue.png);
+    background-color: #a4cdff;
+    border: 2px solid black;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+    font: 30px Heffaklump;
+    font-weight: bolder;
+    background-size: 135px;
+}
+
+/*Dark*/
+div#aio_sidebar::after,
+div#sb_side::after {
+    /*Replace with your own sidebar theme here.*/
+    color: black;
+    background-color: #4e4e4e;
+    border: 3px solid #e1e1e1;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+    font: 30px Heffaklump;
+    font-weight: bolder;
+}
+
+/*Pink*/
+div#aio_sidebar::after,
+div#sb_side::after {
+    /*Replace with your own sidebar theme here.*/ 
+    color: black;
+    background-image: url(https://grundoscafe.b-cdn.net/misc/aio-sidebar/defaultpink.png);
+    background-color: #fe89ff;
+    border: 2px solid black;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+    font: 30px Heffaklump;
+    font-weight: bolder;
+    background-size: 135px;
+}
+
+/*Jelly*/
+div#aio_sidebar::after,
+div#sb_side::after {
+    /*Replace with your own sidebar theme here.*/
+    color: #ffa0c7;
+    background-image: url("https://grundoscafe.b-cdn.net/misc/aio-sidebar/jelly.png");
+    background-color: #94e3ec;
+    border: 3px groove #e38117;
+    font: 24px "Concert One";
+    text-transform: lowercase;
+    background-size: cover;
+}
+
+/*Curse of Maraqua*/
+div#aio_sidebar::after,
+div#sb_side::after {
+    /*Replace with your own sidebar theme here.*/
+    color: #fff;
+    background-image: url("https://grundoscafe.b-cdn.net/misc/aio-sidebar/bubble.png");
+    background-color: #123461;
+    border: 2px solid #0c5f2e;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+    font: 18px "Kristen";
+    text-transform: lowercase;
+    background-size: cover;
+}
+
+/*Pride*/
+div#aio_sidebar::after,
+div#sb_side::after {
+    /*Replace with your own sidebar theme here.*/
+    color: #390e44;
+    background-image: url("https://grundoscafe.b-cdn.net/misc/aio-sidebar/pride.png");
+    background-color: #a4cdff;
+    border: 1px solid #C3B1E1;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+    font: 24px Heffaklump;
+    text-transform: lowercase;
+    background-size: cover;
+}
+
+/*Valentines*/
+div#aio_sidebar::after,
+div#sb_side::after {
+    /*Replace with your own sidebar theme here.*/
+    color: black;
+    background-color: #ffe0e0;
+    border: 3px solid ff5d59;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+    font: 24px Heffaklump;
+    text-transform: lowercase;
+    background-size: cover;
+}
