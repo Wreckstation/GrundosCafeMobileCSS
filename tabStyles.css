@@ -87,7 +87,47 @@ div#sb_side::after {
     background-color: #ffe0e0;
     border: 3px solid ff5d59;
     box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
-    font: 24px Heffaklump;
+    font: 20px Heffaklump;
     text-transform: lowercase;
     background-size: cover;
+}
+
+/*Snow*/
+div#aio_sidebar::after,
+div#sb_side::after {
+    /*Replace with your own sidebar theme here.*/
+    border: 3px solid #3a71a7;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+    color: #647cc7;
+    background-color: #fff;
+    background-image: url(https://grundoscafe.b-cdn.net/misc/snow.png);
+    background-size: cover;
+    font:20px Heffaklump;
+}
+
+/*Winter*/
+div#aio_sidebar::after,
+div#sb_side::after {
+    /*Replace with your own sidebar theme here.*/
+    border: 3px solid #010193;
+    color: #0c7b0a;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.7);
+    text-shadow: -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff, 1px 1px 0 #fff, 0 0 10px #fff;
+    background-color: #245584;
+    font: 26px "Lilita One";
+    background-image: url(https://grundoscafe.b-cdn.net/theme/winter.png);
+    background-size: cover;
+}
+
+/*halloween*/
+div#aio_sidebar::after,
+div#sb_side::after {
+    /*Replace with your own sidebar theme here.*/
+    color: black;
+    background-image: url("https://grundoscafe.b-cdn.net/misc/aio-sidebar/halloween.png");
+    background-color: #414343;
+    border: 3px solid #eeeeb0;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+    font: 24px Chiller;
+    text-transform: lowercase;
 }
