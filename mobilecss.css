@@ -118,6 +118,7 @@
         }
     div#sb_side:hover {
         width: 130px;
+	left: 0px;
         transition: width 0.1s;
         transition-delay: 300ms
         }
