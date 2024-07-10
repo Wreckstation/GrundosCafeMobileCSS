@@ -40,7 +40,6 @@
     div#page_footer {
         width: 100%
     }
-
     div#userinfo {
         font-size: 14px !important
     }
@@ -61,8 +60,6 @@
         width: 380px;
         top: 35px;
         left: 795px;
-        transition: left 0.1s;
-        overflow-x: hidden;
         overflow-y: auto;
         scrollbar-width: thin;
         z-index: 1;
@@ -73,7 +70,6 @@
         height: 200px;
         top: 10%;
         position: fixed;
-        transition: all 0.1s;
         width: 60px;
         writing-mode: vertical-rl;
         box-sizing: border-box;
@@ -100,32 +96,42 @@
         font: 30px Heffaklump;
         font-weight: bolder
     }
+    div#aio_sidebar::after,
+    div#sb_side::after,
+    div#aio_sidebar,
+    div#sb_side {
+        transition:left 0.1s;
+        z-index: 1
+    }
+
+    div#aio_sidebar:hover,
+    div#aio_sidebar:active,
+    div#aio_sidebar:hover::after,
+    div#sb_side:hover,
+    div#sb_side:active,
+    div#sb_side:hover::after {
+        transition: left 0.1s;
+        transition-delay: 300ms;
+    }
     div#aio_sidebar:hover,
     div#aio_sidebar:active {
         width: 380px;
         left: 415px;
-        transition: all 0.1s;
     }
     div#aio_sidebar:hover::after {
         left: 365px;
-        transition: all 0.1s;
     }
     div#sb_side {
-        overflow-x: hidden;
-        z-index: 1;
         left: -140px;
-        transition: left 0.1s;
         top: 0;
         position: fixed
     }
     div#sb_side:hover,
     div#sb_side:active {
         left: 0;
-        transition: left 0.1s;
     }
     div#sb_side:hover::after {
         left: 130px;
-        transition: left 0.1s;
     }
     div#sb_clock {
         position: fixed;
@@ -174,6 +180,7 @@
 (pointer: coarse) and (orientation: landscape) {
     div#container {
         transform: scale(0.65);
+        transform-origin: top left;
         grid-template-columns: 140px minmax(0, 1fr) 190px !important;
         max-width: 935px !important
     }
