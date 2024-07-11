@@ -133,6 +133,9 @@
     div#quickref_petlist {
         width: auto;
     }
+    form {
+        overflow-x: auto
+    }
 }
 @media (pointer: none) and (orientation: landscape),
 (pointer: coarse) and (orientation: landscape) {
