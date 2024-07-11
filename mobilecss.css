@@ -11,11 +11,11 @@
         display: block;
         margin: auto;
         margin-top: 200px;
+        margin-bottom: 150px;
         width: 70%;
         height: 30px;
         content: "";
         text-align: center;
-        padding: 5px;
         border-top: 5px dotted Gainsboro
     }
     div#aio_sidebar {
@@ -58,12 +58,12 @@
     div#aio_sidebar {
         position: fixed;
         width: 380px;
-        top: 35px;
+        top: 0px;
         left: 795px;
         overflow-y: auto;
         scrollbar-width: thin;
         z-index: 1;
-        margin: 10px 0 0 0
+        padding: 40px 0 150px 0
     }
     div#aio_sidebar::after,
     div#sb_side::after {
@@ -79,7 +79,8 @@
         content: "AIO";
         left: 735px;
         border-radius: 15px 0 0 15px;
-        padding-right: 15px
+        padding-right: 15px;
+        z-index: 1
     }
     div#sb_side::after {
         content: "sidebar";
@@ -100,34 +101,33 @@
     div#sb_side::after,
     div#aio_sidebar,
     div#sb_side {
-        transition:left 0.1s;
-        z-index: 1
+        transition: left 0.1s;
     }
 
     div#aio_sidebar:hover,
-    div#aio_sidebar:active,
     div#aio_sidebar:hover::after,
     div#sb_side:hover,
-    div#sb_side:active,
     div#sb_side:hover::after {
         transition: left 0.1s;
         transition-delay: 300ms;
     }
-    div#aio_sidebar:hover,
-    div#aio_sidebar:active {
-        width: 380px;
+    div#sb_side,
+    div#sb_side::after,
+    div#sb_top {
+        z-index: 2;
+    }
+    div#aio_sidebar:hover {
         left: 415px;
     }
     div#aio_sidebar:hover::after {
-        left: 365px;
+        left: 355px;
     }
     div#sb_side {
         left: -140px;
         top: 0;
         position: fixed
     }
-    div#sb_side:hover,
-    div#sb_side:active {
+    div#sb_side:hover {
         left: 0;
     }
     div#sb_side:hover::after {
