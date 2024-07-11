@@ -40,9 +40,8 @@
     div#page_footer {
         width: 100%
     }
-    div#sb_side,
-    div#aio_sidebar {
-        z-index: 1
+    div#sb_side {
+        z-index: 2
     }
     div#userinfo {
         font-size: 14px !important
@@ -59,6 +58,7 @@
     div#aio_sidebar::after,
     div#aio_sidebar {
         transition: left 0.1s;
+        z-index:1;
     }
     div#aio_sidebar:hover,
     div#aio_sidebar:active,
@@ -69,10 +69,11 @@
     div#aio_sidebar {
         position: fixed;
         width: 380px;
-        top: 40px;
+        top: 0px;
         left: 795px;
         overflow-y: auto;
         scrollbar-width: thin;
+        padding: 40px 0 150px 0;
     }
     div#aio_sidebar::after {
         height: 200px;
