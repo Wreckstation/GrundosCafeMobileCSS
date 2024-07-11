@@ -175,6 +175,9 @@
     div.flex-column {
         max-width: 100%
     }
+    form {
+        overflow-x: auto
+    }
 }
 @media (pointer: none) and (orientation: landscape),
 (pointer: coarse) and (orientation: landscape) {
