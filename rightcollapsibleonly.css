@@ -133,7 +133,7 @@
     div#quickref_petlist {
         width: auto;
     }
-    form {
+    form[method="post"] {
         overflow-x: auto
     }
 }
