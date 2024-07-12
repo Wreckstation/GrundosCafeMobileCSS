@@ -175,7 +175,7 @@
     div.flex-column {
         max-width: 100%
     }
-    form {
+    form[method="post"] {
         overflow-x: auto
     }
 }
