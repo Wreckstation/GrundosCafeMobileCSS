@@ -3,22 +3,10 @@ Enhanced sitewide mobile CSS for grundos.cafe. Main page is located on /~HiImAGr
 
 ## Features
 * collapsible sidebars
-  * nothing goes in sidebar css so it should work with custom sidebars, just make sure nothing overwrites the other
+  * nothing goes in sidebar css so it should work with custom sidebars, just make sure nothing overwrites the other parts of the css.
 * Because of the zoom, some html5 games may be too large. Switch to landscape mode to resize the ui.
 * Sidebars and header will stay in place while scrolling
-  * This can be removed by changing this css:
-```css
-/*Original*/
-div#page_content {
-min-height:[x];
-max-height:[x];
-overflow:auto;
-}
-/*Change to this*/
-div#page_content {
-overflow:auto;
-}
-```
+  * This can be removed by removing the commented section.
 
 ## Versions
 ### `mobilecss.css`
@@ -27,6 +15,8 @@ The main css. Both sidebars are collapsible in this version.
 Version that only collapses the right sidebar. The Classic Neopets look!
 ### `RightCollapsibleCompatible.css`
 Some devices/browsers have difficulty with the original css. This is a different implementation that will work on those devices, but the right sidebar can no longer be scrolled in place.
+### `tabStyles.css`
+By default, the tabs will look like the classic sidebar. This CSS will let you make it look like other site themes.
 
 ## Addons
 ### `NoDescriptionCol.css`
