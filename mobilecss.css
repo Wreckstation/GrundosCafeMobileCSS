@@ -175,8 +175,11 @@
     div.flex-column {
         max-width: 100%
     }
-    form[method="post"] {
-        overflow-x: auto
+    form[method="post"]:not([action]) {
+        overflow-x:auto;
+    }
+    form#bd-form {
+        max-width:100%;
     }
 }
 @media (pointer: none) and (orientation: landscape),
