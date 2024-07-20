@@ -175,7 +175,7 @@
     div.flex-column {
         max-width: 100%
     }
-    form[method="post"]:not([action]) {
+    form[method="post"]:not([action]):not(.half-width) {
         overflow-x:auto;
     }
     form#bd-form {
