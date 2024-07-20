@@ -133,7 +133,7 @@
     div#quickref_petlist {
         width: auto;
     }
-    form[method="post"]:not([action]) {
+    form[method="post"]:not([action]):not(.half-width) {
         overflow-x:auto;
     }
     form#bd-form {
