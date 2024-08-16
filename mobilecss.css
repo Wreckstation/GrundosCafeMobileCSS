@@ -62,7 +62,7 @@
         left: 795px;
         overflow-y: auto;
         scrollbar-width: thin;
-        z-index: 1;
+        z-index: 1001;
         padding: 40px 0 150px 0
     }
     div#aio_sidebar::after,
@@ -73,14 +73,15 @@
         width: 60px;
         writing-mode: vertical-rl;
         box-sizing: border-box;
-        padding: 10px
+        padding: 10px;
+        font-size:24px
     }
     div#aio_sidebar::after {
         content: "AIO";
         left: 735px;
         border-radius: 15px 0 0 15px;
         padding-right: 15px;
-        z-index: 1
+        z-index: 1001
     }
     div#sb_side::after {
         content: "sidebar";
@@ -114,7 +115,7 @@
     div#sb_side,
     div#sb_side::after,
     div#sb_top {
-        z-index: 2;
+        z-index: 1001;
     }
     div#aio_sidebar:hover {
         left: 415px;
