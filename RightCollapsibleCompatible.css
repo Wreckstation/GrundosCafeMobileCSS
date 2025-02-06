@@ -113,7 +113,7 @@
             width:1em;
         }
         div#aio_sidebar .aioImg img {
-            max-height: 50px !important
+            width: 50px
         }
         .game {
             grid-template-rows: 50px 50px auto auto;
@@ -159,6 +159,9 @@
         #userinfo {
             font-size: 0.6em;
         }
+}
+a#show-mobile-toggle {
+	display:none;
 }
 @media (pointer: none) and (orientation: landscape),
 (pointer: coarse) and (orientation: landscape) {
