@@ -151,7 +151,7 @@
         width: 1em
     }
     div#aio_sidebar .aioImg img {
-        max-height: 50px !important
+        width: 50px
     }
     .inventory {
         grid-template-columns: repeat(5, 110px);
@@ -181,7 +181,10 @@
     }
     form#bd-form {
         max-width:100%;
-    }
+    }  
+}
+a#show-mobile-toggle {
+    display:none;
 }
 @media (pointer: none) and (orientation: landscape),
 (pointer: coarse) and (orientation: landscape) {
